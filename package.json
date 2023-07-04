@@ -1,23 +1,23 @@
 {
-    "name": "m2-won",
-    "version": "1.0.0",
-    "description": "Build M2-Won",
-    "main": "index.js",
-    "scripts": {
-        "deploy": "./deploy.sh",
-        "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
-        "build": "cd ./backend && npm install && npm run build  && cd ./frontend && npm install && npm run build",
-        "dev-frontend": "cd ./frontend && npm run dev",
-        "start-backend": "cd ./backend && node API",
-        "start": "npm-run-all --parallel dev-frontend start-backend",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "",
-    "license": "ISC",
-    "devDependencies": {
-        "concurrently": "^8.2.0"
-    },
-    "dependencies": {
-        "npm-run-all": "^1.7.0"
-    }
+  "name": "m2-won",
+  "version": "1.0.0",
+  "description": "Build M2-Won",
+  "main": "index.js",
+  "scripts": {
+      "deploy": "./deploy.sh",
+      "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+      "build": "cd ./backend && npm install && npm build  && cd ./frontend && npm install && npm build",
+      "dev-frontend": "cd ./frontend && npm run dev",
+      "start-backend": "cd ./backend && node API",
+      "start": "npm-run-all --parallel dev-frontend start-backend",
+      "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+      "concurrently": "^8.2.0"
+  },
+  "dependencies": {
+      "npm-run-all": "^1.7.0"
+  }
 }
