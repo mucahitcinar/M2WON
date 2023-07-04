@@ -6,13 +6,18 @@
     "scripts": {
         "deploy": "./deploy.sh",
         "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
-         "build": "cd ./backend && npm install && npm run build  && cd ./frontend && npm install && npm run build",
-         "start": "concurrently \"cd ./backend && node API\" \" cd ./frontend/ && npm run dev\"",
-         "test": "echo \"Error: no test specified\" && exit 1"
+        "build": "cd ./backend && npm install && npm run build  && cd ./frontend && npm install && npm run build",
+        "dev-frontend": "cd ./frontend && npm run dev",
+        "start-backend": "cd ./backend && node API",
+        "start": "npm-run-all --parallel dev-frontend start-backend",
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "",
     "license": "ISC",
     "devDependencies": {
         "concurrently": "^8.2.0"
+    },
+    "dependencies": {
+        "npm-run-all": "^4.1.5"
     }
 }
